@@ -10,7 +10,7 @@
     <main>
         <h1>Todo App</h1>
         <form class="add-task" action="/api/task/add" method="post">
-            <input type="text" name="task" placeholder="Enter todo">
+            <input maxlength="50" type="text" name="task" placeholder="Enter todo">
             <button type="submit">Add</button>
         </form>
         <form class="edit-task" action="/api/task/edit" method="post">
