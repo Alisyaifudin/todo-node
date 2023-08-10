@@ -1,0 +1,21 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    restart: always
+    volumes:
+      - db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+    environment:
+      POSTGRES_DB: main
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+
+volumes:
+  db:
+    driver: local
