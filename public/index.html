@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Hello World!</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Todo App</h1>
+        <form class="add-task" action="/api/task/add" method="post">
+            <input type="text" name="task" placeholder="Enter todo">
+            <button type="submit">Add</button>
+        </form>
+        <form class="edit-task" action="/api/task/edit" method="post">
+            <ul id="list">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+            </ul>
+            <button type="submit">Save</button>
+        </form>
+    </main>
+</body>
+
+</html>

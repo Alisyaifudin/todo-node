@@ -1,11 +1,19 @@
-import express from 'express';
-const app = express();
+import express from "express";
+import path from "path";
+import assetsRoute from "./routes/public";
+import taskRoute from "./api/task";
+
+export const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World! How are you!');
+app.use(express.urlencoded({ extended: true }));
+app.use(assetsRoute);
+app.use("/api/task", taskRoute);
+
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+	return console.log(`Express is listening at http://localhost:${port}`);
 });

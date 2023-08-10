@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+h1 {
+    font-size: larger;
+}
+
+.add-task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.add-task > input {
+    flex: 1;
+}
+
+button {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.edit-task {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+li input {
+    display: none;
+}
+
+li > .task {
+    flex: 1;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.deleted {
+    color: rgba(145, 145, 145, 0.2);
+}
+
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    width: 100%;
+    height: 1rem;
+  }
+  
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(200, 20%, 80%);
+    }
+    100% {
+      background-color: hsl(200, 20%, 95%);
+    }
+  }
